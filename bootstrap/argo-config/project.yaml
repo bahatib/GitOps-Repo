@@ -10,6 +10,7 @@ spec:
   description: Lab environments (one namespace per product per environment)
   sourceRepos:
     - git@github.com:DEVOPS-CANARY/GitOps-Repo.git
+    - https://github.com/bahatib/GitOps-Repo.git # my fork: Argo CD reads values/secrets from here
     - ghcr.io/devops-canary/charts # platform Helm charts (DEVOPS-CANARY/helm-charts)
   destinations:
     - server: https://kubernetes.default.svc

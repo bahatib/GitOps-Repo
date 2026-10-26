@@ -15,6 +15,7 @@ spec:
   description: Shared platform components (entry point, autoscaling, policies)
   sourceRepos:
     - git@github.com:DEVOPS-CANARY/GitOps-Repo.git
+    - https://github.com/bahatib/GitOps-Repo.git # my fork: policies sourced from here
     - https://github.com/kubernetes-sigs/gateway-api.git
     - https://github.com/traefik/traefik-helm-chart.git
     - https://github.com/kedacore/charts.git
@@ -227,7 +228,7 @@ metadata:
 spec:
   project: platform
   source:
-    repoURL: git@github.com:DEVOPS-CANARY/GitOps-Repo.git
+    repoURL: https://github.com/bahatib/GitOps-Repo.git
     targetRevision: main
     path: platform/policies
   destination:

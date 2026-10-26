@@ -32,7 +32,7 @@ spec:
         resources: [pods]
   variables:
     - name: registry
-      expression: '"ghcr.io/devops-canary/"'
+      expression: '"ghcr.io/bahatib/"'
     - name: images
       expression: >-
         object.spec.containers.map(c, c.image)
