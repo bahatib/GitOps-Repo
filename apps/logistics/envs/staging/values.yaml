@@ -12,7 +12,7 @@ components:
   backend:
     image:
       repository: ghcr.io/bahatib/logistics-backend
-      digest: sha256:82a7402773d9fd43ca283dd2ceeb903d64cef8a70da00034cfdebc5f91a64b1c # staging@3abed0f tree-a46dcb9f
+      digest: sha256:11bbf60d6562fc71bb449e3dba48486b34dde0bc6f4cf88ee581a45486f0b186 # staging@393871e tree-6e36b142
     env:
       ALLOWED_ORIGINS: http://staging.logistics.local
       # Required in practice: the app passes these straight to jsonwebtoken,
@@ -31,13 +31,13 @@ components:
   frontend:
     image:
       repository: ghcr.io/bahatib/logistics-frontend
-      digest: sha256:71146bfaaaa8ae8e784789b3c59465450048c2a714f8834919a4530c27230a8e # staging@3abed0f tree-a46dcb9f
+      digest: sha256:352cb4fc90b70e1a85e56da013a3f746ce8148c606d20fe7fd8a5cf04f2c2a71 # staging@393871e tree-6e36b142
     replicas: 1
 
   notifications: # the worker: shared settings in ../../values.yaml
     image:
       repository: ghcr.io/bahatib/logistics-backend
-      digest: sha256:82a7402773d9fd43ca283dd2ceeb903d64cef8a70da00034cfdebc5f91a64b1c # staging@3abed0f tree-a46dcb9f
+      digest: sha256:11bbf60d6562fc71bb449e3dba48486b34dde0bc6f4cf88ee581a45486f0b186 # staging@393871e tree-6e36b142
     env:
       KAFKA_USERNAME: logistics_staging
       KAFKA_TOPIC_PREFIX: staging.logistics.
