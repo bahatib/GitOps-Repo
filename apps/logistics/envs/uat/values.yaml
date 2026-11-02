@@ -11,7 +11,7 @@ components:
   backend:
     image:
       repository: ghcr.io/bahatib/logistics-backend
-      digest: sha256:11bbf60d6562fc71bb449e3dba48486b34dde0bc6f4cf88ee581a45486f0b186 # develop@378df9d tree-ab4f5591
+      digest: sha256:11bbf60d6562fc71bb449e3dba48486b34dde0bc6f4cf88ee581a45486f0b186 # develop@75f8d1b tree-6e36b142
     env:
       ALLOWED_ORIGINS: http://uat.logistics.local
       # Required in practice: the app passes these straight to jsonwebtoken,
@@ -30,13 +30,13 @@ components:
   frontend:
     image:
       repository: ghcr.io/bahatib/logistics-frontend
-      digest: sha256:352cb4fc90b70e1a85e56da013a3f746ce8148c606d20fe7fd8a5cf04f2c2a71 # develop@378df9d tree-ab4f5591
+      digest: sha256:352cb4fc90b70e1a85e56da013a3f746ce8148c606d20fe7fd8a5cf04f2c2a71 # develop@75f8d1b tree-6e36b142
     replicas: 2
 
   notifications: # the worker: shared settings in ../../values.yaml
     image:
       repository: ghcr.io/bahatib/logistics-backend
-      digest: sha256:11bbf60d6562fc71bb449e3dba48486b34dde0bc6f4cf88ee581a45486f0b186 # develop@378df9d tree-ab4f5591
+      digest: sha256:11bbf60d6562fc71bb449e3dba48486b34dde0bc6f4cf88ee581a45486f0b186 # develop@75f8d1b tree-6e36b142
     env:
       KAFKA_USERNAME: logistics_uat
       KAFKA_TOPIC_PREFIX: uat.logistics.
